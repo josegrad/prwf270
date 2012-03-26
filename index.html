@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><title>7 Spade</title><link rel="stylesheet" type="text/css" href="style.css"/><script type="text/javascript" src="misc.js"></script><script type="text/javascript" src="card.js"></script><script type="text/javascript" src="player.js"></script><script type="text/javascript" src="deck.js"></script>
+<body id="body"><div id="bd"></div><div id="tt"></div><div id="base"><div id="by">by <a href="http://soesapto.web.id" target="_blank">Soesapto J.H.</a></div></div><div class="dlg" id="mn"><br/><label id="tt0">7</label><label id="tt1">Spade</label><ul class="mnu"><li onclick="ng()"><b>New Game</b></li><li onclick="lg()" id="lg">Load Game</li><li onclick="sst()">Statistics</li><li onclick="sdlg('rl',440,270)">Rules &amp; Tips</li><li onclick="sdlg('htp',440,270)">How to play</li></ul></div>
+<div id="p0" class="p">You</div><div id="p1" class="p">Computer 1</div><div id="p2" class="p">Computer 2</div><div id="p3" class="p">Computer 3</div>
+<div id="r0" class="r"></div><div id="r1" class="r"></div><div id="r2" class="r"></div><div id="r3" class="r"></div>
+<div id="rl" class="dlg"><h2>Rules &amp; Tips<div class="cls" onclick="cdlg('rl');sdlg(omn)">x</div></h2>
+<div class="cntdlg" id="crl"><ul>
+<li>Card suits: <img src="i/0.png"/> (Spade), <img src="i/1.png"/> (Club), <img src="i/2.png"/> (Diamond), <img src="i/3.png"/> (Heart)</li>
+<li>The game is started by player which have "7" Spade card. He must put it on the deck. The Next Player can put sequence of the card ("8" or "6" Spade), or put another "7" card (Heart, Diamond or Club). It continues until "2" or "King" card.</li>
+<li>The "Ace" card can be put after "2" (bottom closing) or "King" (top closing). Once "Ace" is down, either "bottom closing" or "top closing", the rest Aces must be put in same way.</li>
+<li>After "Ace" card is down, the deck is closed, so the other cards with same suit can not be played again.</li>
+<li>If player can't play on his turn, can't fill the sequence nor put another "7" card, he must choose a card as dead card.</li>
+<li>Score of each player is calculated from the dead cards, the smaller the better.</li>
+<li>Every card rank represents its score: "2" = 2, "3" = 3, ... , "Jack" = 11, "Queen" = 12, "King" = 13.</li>
+<li>The "Ace" have different score. If game is "bottom closing", "Ace" is calculated as 1. If game is "top closing", "Ace" is calculated as 14.</li>
+<li>Of course, the goal of the game is getting smallest score.</li>
+<li>If you must choose a dead card, make it as advantage for you, but disaster for the others, the rest sequence can't be played if a card is dead. For example: If "10 Spade" card has choosen as a dead card, the "J","Q","K" Spade will become a dead card too.</li>
+<li>Be wise on putting "Ace". After "Ace" is down, the other card with same suit will be a dead card. Score of "Ace" is very significant on "top closing".</li>
+</ul></div></div>
+<div id="htp" class="dlg"><h2>How to play<div class="cls" onclick="cdlg('htp');sdlg(omn)">x</div></h2><div class="cntdlg" id="chtp"><ul>
+<li>You can play only on your turn. If you have "7 Spade" card, you must choose it to start the game.</li>
+<li>Click a card to put it on the deck. It will be put on the right deck.</li>
+<li>Clicking your card while you don't have any playable card will make your card as a dead card.</li>
+<li>Dead card is marked with red border.</li>
+<li>Game can be saved and loaded any time.</li>
+</ul></div></div>
+<div id="cnf" class="dlg"><h2>Confirmation<div class="cls" onclick="cdlg('cnf')">x</div></h2><div class="cntdlg" id="ccnf">Ace can be put on top or bottom of the deck.<br/>Where will you put the card ?<br/><br/><br/><br/><input type="button" value="Bottom" onclick="cs=1;cdlg('cnf');cc(ci);"/><input type="button" value="Top" onclick="cs=2;cdlg('cnf');cc(ci);"/></div></div>
+<div id="rs" class="dlg"><h2>Result<div class="cls" onclick="rsc()">x</div></h2><div id="trs" class="t"></div><div class="cntdlg" id="crs"></div></div>
+<div id="st" class="dlg"><h2>Statistics<div class="cls" onclick="cdlg('st');sdlg(omn)">x</div></h2><div id="tst" class="t"></div><div class="cntdlg" id="cst"></div></div>
+<div id="pmn" class="dlg"><h2>Game Paused<div class="cls" onclick="cdlg('pmn')">x</div></h2><div id="cpmn"><ul class="mnu"><li onclick="cdlg('pmn')"><b>Resume</b></li><li onclick="sg();cdlg('pmn')" id="sg">Save Game</li><li onclick="sst()">Statistics</li><li onclick="sdlg('rl',440,270)">Rules &amp; Tips</li><li onclick="sdlg('htp',440,270)">How to play</li><li><input type="checkbox" id="sh" onclick="shc(this)"/>Show Hint</li></ul></div></div>
+<div id="hint"><div id="chint"></div><input type="button" id="bmn" value="Menu" onclick="omn='pmn';sdlg(omn)"/></div>
+<script type="text/javascript" src="game.js"></script>
+</body></html>

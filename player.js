@@ -1,0 +1,5 @@
+function Player(a){this.id=a;this.a=new Array(13);this.ac=0;this.d=new Array(13);this.dc=0;this.sc=0;this.x1=0;this.y1=0;this.x2=0;this.y2=0}
+Player.prototype.apc=function (a){var id=0;for(var i=0;i<13;i++){if(this.a[i]==-1 || this.a[i]==null){this.a[i]=a;this.ac++;id=i;break;}}for(var i=0;i<id;i++){for(var j=(i+1);j<=id;j++){if (this.a[i]>this.a[j]){tmp=this.a[i];this.a[i]=this.a[j];this.a[j]=tmp;}}}u[a].z();}
+Player.prototype.rpc=function(a){for(var i=0;i<13;i++){if(this.a[i]==a){var j;for(j=i;j<12;j++){this.a[j]=this.a[j+1];this.a[j+1]=-1;}this.a[j]=-1;this.ac--;break;}}}
+Player.prototype.adc=function(a){for(var i=0;i<13;i++){if(this.d[i]==-1 || this.d[i]==null){this.d[i]=a;this.dc++;u[a].k=1;break;}}}
+Player.prototype.clr=function(){for(var i=0;i<13;i++){this.a[i]=-1;this.d[i]=-1;}this.ac=0;this.dc=0;}
